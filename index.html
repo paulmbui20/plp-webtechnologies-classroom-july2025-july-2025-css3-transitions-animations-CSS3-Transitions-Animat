@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS & JavaScript Animation Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Interactive Animation Showcase</h1>
+
+        <!-- Control buttons -->
+        <div class="controls">
+            <button class="btn" onclick="animateAllCards('flip')">Flip Cards</button>
+            <button class="btn" onclick="animateAllCards('bounce')">Bounce Cards</button>
+            <button class="btn" onclick="animateAllCards('pulse')">Pulse Cards</button>
+            <button class="btn" onclick="showLoadingAnimation()">Show Loading</button>
+        </div>
+
+        <!-- Loading spinner -->
+        <div class="spinner" id="spinner"></div>
+
+        <!-- Card grid -->
+        <div class="card-grid" id="cardGrid">
+            <div class="card" onclick="handleCardClick(this, 0)">
+                <h3 class="card-title">Card 1</h3>
+                <p class="card-content">Click me to see different animations! Hover to see the lift effect.</p>
+            </div>
+            <div class="card" onclick="handleCardClick(this, 1)">
+                <h3 class="card-title">Card 2</h3>
+                <p class="card-content">Each click triggers a random animation. Try the buttons above too!</p>
+            </div>
+            <div class="card" onclick="handleCardClick(this, 2)">
+                <h3 class="card-title">Card 3</h3>
+                <p class="card-content">Watch how CSS animations work with JavaScript events.</p>
+            </div>
+            <div class="card" onclick="handleCardClick(this, 3)">
+                <h3 class="card-title">Card 4</h3>
+                <p class="card-content">Smooth transitions make the interface feel responsive and alive.</p>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Congratulations!</h2>
+                <p id="modalText">You've clicked a card!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
